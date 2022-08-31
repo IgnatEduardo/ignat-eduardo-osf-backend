@@ -1,0 +1,17 @@
+extends layout 
+
+block content           
+    div
+        ul(style='list-style-type:none') 
+          each i in categories
+            if i.image == "categories/category_404.png"
+              continue
+            else
+              div
+                hr
+                h3.title.index-mid= i.page_title
+                a.index-mid.image-mid(href='/products/categories/' + i.id)
+                  img(src='/static/images/' + i.image)
+                p.text-mid= i.page_description
+                a(href='/products/categories/' + i.id)
+                  button.btn(type='button') More Info ->

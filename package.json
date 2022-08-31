@@ -1,0 +1,26 @@
+{
+  "name": "osf_ignateduardo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.27.2",
+    "cookie-parser": "^1.4.6",
+    "dotenv": "^16.0.2",
+    "express": "^4.18.1",
+    "heroku": "^7.62.0",
+    "http-errors": "^2.0.0",
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.19",
+    "pug": "^3.0.2"
+  },
+  "engines": {
+    "node": "16.16.0"
+  }
+}

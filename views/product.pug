@@ -1,0 +1,33 @@
+extends layout 
+
+block content
+        each i in product
+            div.row
+                .column
+                    a(href='/products/product_id/' + i.id)
+                    img.w-75(src='/static/images/' + i.image_groups[0].images[0].link)
+                .column
+                    .row
+                        .column
+                            h2= i.name
+                            hr
+                            h5= i.long_description
+                    .row
+                        .column
+                            .row
+                                if (username != "Visitor")
+                                    a(href='/order/addtocart/'+i.id+'/'+i.variants[0].product_id )
+                                        button.btn(type='submit' name='product_id') Add to Cart
+                                    br
+                                    a(href='/order/addtowishlist/'+i.id+'/'+i.variants[0].product_id )
+                                        button.btn(type='submit' name='product_id') Add to Wishlist
+                                    br
+                                else
+                                    p Please log in for add this item to cart
+                        .column
+                            .row
+                                    p Price:
+                                    p= i.price
+                                    p .00  
+                                    h5=i.currency
+

@@ -1,0 +1,21 @@
+
+
+extends layout 
+
+block content
+
+    div.index-mid
+        div.signin
+            h1.index-mid Sign in
+
+            form(action='/auth/signin', method='post')
+                div 
+                        input.form(type='text', placeholder='username' name='email', autocomplete='off')
+                br
+                div
+                        input.form(type='text', placeholder='password' name='password', autocomplete='off')
+                br      
+                button.btn.long(type='submit') LOGIN
+
+                a.text-right-small(href='/auth/signup') Don't have an account? Sign up ->
+
